@@ -31,13 +31,13 @@ Running the `docker-compose.yaml` as is will build the system as a sample enviro
 
   ~~~ text
   IBM Business Automation Manager Open Edition v9.1.1
-  PostgreSQL Database with the SQL to create it
-  
-  BAMOE Canvas - The new web-based tooling for editing DMN and BPMN models
-  BAMOE Canvas Extended Services - To run DMN models as you make modifications in Canvas
-  GitHub CORS Proxy - Image to be able to do local GitHub communication with GitHub through CORS
-  BAMOE Management Console - A console to manage process instances
-  BAMOE Task Console - A console used to manage process task lifecycles
+
+  - PostgreSQL Database with the SQL to create it
+  - BAMOE Canvas - The new web-based tooling for editing DMN and BPMN models
+  - BAMOE Canvas Extended Services - To run DMN models as you make modifications in Canvas
+  - GitHub CORS Proxy - Image to be able to do local GitHub communication with GitHub through CORS
+  - BAMOE Management Console - A console to manage process instances
+  - BAMOE Task Console - A console used to manage process task lifecycles
   ~~~
 
 ## Installed Services
@@ -52,4 +52,4 @@ Services installed during this process can be accessed at:
 
 ## Maven Repository
 
-For more information on how to properly setup Maven for local development, visit [Setting Up Maven](.maven/README.md).
+For more information on how to properly setup Maven for local development, visit [Setting Up Maven](./maven/README.md).
