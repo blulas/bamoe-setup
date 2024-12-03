@@ -4,5 +4,5 @@ services:
     platform: linux/amd64
     container_name: bamoe-maven-repository
     ports:
-      - 9000:8080
+      - 31000:8088
 

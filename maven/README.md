@@ -27,7 +27,7 @@ There are two ways to do this:
 2.  Run the image, mapping its port:
 
 ~~~shell
-docker run -d -p 9000:8080 quay.io/bamoe/maven-repository:9.1.1-ibm-0003
+docker run -d -p 31000:8080 quay.io/bamoe/maven-repository:9.1.1-ibm-0003
 ~~~
 
 You can verify the repository is running by accessing the repository in your browser at http://localhost:<PORT>/com/ibm/bamoe.
@@ -44,7 +44,7 @@ You can verify the repository is running by accessing the repository in your bro
     <repositories>
         <repository>
         <id>ibm-bamoe-enterprise-maven-repository</id>
-        <url>http://localhost:9000</url>
+        <url>http://localhost:31000</url>
         <releases>
             <enabled>true</enabled>
         </releases>
@@ -56,7 +56,7 @@ You can verify the repository is running by accessing the repository in your bro
     <pluginRepositories>
         <pluginRepository>
         <id>ibm-bamoe-enterprise-maven-repository</id>
-        <url>http://localhost:9000</url>
+        <url>http://localhost:31000</url>
         <releases>
             <enabled>true</enabled>
         </releases>

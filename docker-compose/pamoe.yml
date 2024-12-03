@@ -4,7 +4,7 @@ services:
     platform: linux/amd64
     container_name: maven-repository
     ports:
-      - 31000:8088
+      - 31000:8080
 
   canvas:
     container_name: bamoe-canvas

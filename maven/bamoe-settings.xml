@@ -38,7 +38,7 @@
             <repositories>
                 <repository>
                     <id>ibm-bamoe-v9-maven-repository</id>
-                    <url>http://localhost:9000</url>
+                    <url>http://localhost:31000</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -51,7 +51,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>ibm-bamoe-v9-maven-repository</id>
-                    <url>http://localhost:9000</url>
+                    <url>http://localhost:31000</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
