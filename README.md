@@ -3,8 +3,8 @@
 This repository sets up the required infrastructure services in order to run IBM Business Automation Manager Open Editions (BAMOE) using `docker-compose`, allowing for a customized setup based on subscription entitlements and use case requirements, including:
 
 - BAMOE Maven Repository (standalone)
-- BAMOE Canvas (standalone)
-- BAMOE (all typical components)
+- BAMOE Canvas (standalone) - 
+- BAMOE (Maven, Canvas, Keycloak, Management & Task Consoles, no PostgreSQL) - 
 
 ## Requirements for Local Machine Setup
 The following instructions are helpful in setting up your local environment in order to do BAMOE development.  All functions of BAMOE are available from the developer workstation, including web-based tools and consoles.
@@ -38,8 +38,7 @@ Choices are:
 
 - **BAMOE Maven Repository** `docker compose -f docker-compose/bamoe-maven.yml up`
 - **BAMOE Canvas** `docker compose -f docker-compose/bamoe-canvas.yml up`
-- **DMOE (Maven, Canvas)** `docker compose -f docker-compose/dmoe.yml up`
-- **PAMOE (Maven, Canvas, Management Console, Task Console, PostgreSLQ)** `docker compose -f docker-compose/pamoe.yml up`
+- **BAMOE All (Maven, Canvas, Keycloak, Management & Task Consoles)** `docker compose -f docker-compose/bamoe-all.yml up`
 
 ## Installed Services
 Services installed during this process can be accessed at:
