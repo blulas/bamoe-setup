@@ -32,47 +32,7 @@ docker run -d -p 31000:8080 quay.io/bamoe/maven-repository:9.1.1-ibm-0003
 
 You can verify the repository is running by accessing the repository in your browser at http://localhost:<PORT>/com/ibm/bamoe.
 
-3.  Open the Maven ~/.m2/settings.xml file in a text editor or integrated development environment (IDE).
-
-    > **_NOTE:_**  If there is no settings.xml file in the ~/.m2/ directory, copy the settings.xml file from the $MAVEN_HOME/.m2/conf/ directory into the ~/.m2/ directory.
-
-4. Add the following lines to the <profiles> element of the settings.xml file:
-
-    ```xml
-    <profile>
-    <id>ibm-bamoe-enterprise-maven-repository</id>
-    <repositories>
-        <repository>
-        <id>ibm-bamoe-enterprise-maven-repository</id>
-        <url>http://localhost:31000</url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-        <id>ibm-bamoe-enterprise-maven-repository</id>
-        <url>http://localhost:31000</url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-    </profile>
-    ```
-
-5.  Add the following lines to the <activeProfiles> element of the settings.xml file and save the file:
-
-```xml
-<activeProfile>ibm-bamoe-enterprise-maven-repository</activeProfile>
-```
+3. Copy the file named `settings.xml` to your local .m2 folder
 
 ## Configuring a local Maven Repository 
 If you prefer not to use containers, you can download and configure the BAMOE Maven repository from the compressed file. The BAMOE Maven repository contains the libraries that Java developers need to build BAMOE applications.  To configure the BAMOE Maven repository locally follow these steps:
