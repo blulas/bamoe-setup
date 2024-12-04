@@ -4,8 +4,7 @@ This repository sets up the required infrastructure services in order to run IBM
 
 - BAMOE Maven Repository (standalone)
 - BAMOE Canvas (standalone)
-- BAMOE Decision Manager Open Edition (DMOE) typical components
-- BAMOE Process Automation Manager Open Edition (PAMOE) typical components
+- BAMOE (all typical components)
 
 ## Requirements for Local Machine Setup
 The following instructions are helpful in setting up your local environment in order to do BAMOE development.  All functions of BAMOE are available from the developer workstation, including web-based tools and consoles.
