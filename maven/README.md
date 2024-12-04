@@ -83,33 +83,134 @@ If you prefer not to use containers, you can download and configure the BAMOE Ma
 4.  Add the following lines to the <profiles> element of the Maven settings.xml file, where <MAVEN_REPOSITORY> is the path of the Maven repository that you downloaded. The format of <MAVEN_REPOSITORY> must be file://$PATH. For example, file:///home/userX/bamoe-9.1.x-maven-repository/:.
 
 ```xml
-<profile>
-  <id>ibm-bamoe-enterprise-maven-repository</id>
-  <repositories>
-    <repository>
-      <id>ibm-bamoe-enterprise-maven-repository</id>
-      <url><MAVEN_REPOSITORY></url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>ibm-bamoe-enterprise-maven-repository</id>
-      <url><MAVEN_REPOSITORY></url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
-</profile>
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/SETTINGS/1.0.0" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+<<localRepository>${user.home}/.m2/repository</localRepository>
+    <profiles>
+        <!-- BAMOE v8 via Public Maven (Red Hat) -->
+        <profile>
+            <id>ibm-bamoe-v8-maven-repository</id>
+            <repositories>
+                <repository>
+                    <id>ibm-bamoe-v8-maven-repository</id>
+                    <url>https://maven.repository.redhat.com/ga/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>ibm-bamoe-v8-maven-repository</id>
+                    <url>https://maven.repository.redhat.com/ga/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+
+        <!-- BAMOE v9 via Container Image -->
+        <profile>
+            <id>ibm-bamoe-v9-maven-repository</id>
+            <repositories>
+                <repository>
+                    <id>ibm-bamoe-v9-maven-repository</id>
+                    <url>http://localhost:31000</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>ibm-bamoe-v9-maven-repository</id>
+                    <url>http://localhost:31000</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+
+        <!-- BAMOE 8.0.6 via Offline -->
+        <profile>
+            <id>ibm-bamoe-806-offline-maven-repository</id>
+            <repositories>
+                <repository>
+                    <id>ibm-bamoe-806-offline-maven-repository</id>
+                    <url>file:///Users/${USER}/.m2/bamoe-8.0.6.GA-maven-repository</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>ibm-bamoe-806-offline-maven-repository</id>
+                    <url>file:///Users/${USER}/.m2/bamoe-8.0.6.GA-maven-repository</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    </pluginRepository>
+            </pluginRepositories>
+        </profile>
+
+        <!-- BAMOE 9.1.1 via Offline -->
+        <profile>
+            <id>ibm-bamoe-911-offline-maven-repository</id>
+            <repositories>
+                <repository>
+                    <id>ibm-bamoe-911-offline-maven-repository</id>
+                    <url>file:///Users/${USER}/.m2/bamoe-9.1.1.GA-maven-repository</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>ibm-bamoe-911-offline-maven-repository</id>
+                    <url>file:///Users/${USER}/.m2/bamoe-9.1.1.GA-maven-repository</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>ibm-bamoe-v9-maven-repository</activeProfile>
+        <activeProfile>ibm-bamoe-911-offline-maven-repository</activeProfile>
+    </activeProfiles>
+</settings>
 ```
 
 5.  Add the following lines to the <activeProfiles> element of the Maven settings.xml file and save the file:
