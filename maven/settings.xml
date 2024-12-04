@@ -68,7 +68,7 @@
             <repositories>
                 <repository>
                     <id>ibm-bamoe-806-offline-maven-repository</id>
-                    <url>file:///Users/blulas/.m2/bamoe-8.0.6.GA-maven-repository</url>
+                    <url>file:///Users/$USER/.m2/bamoe-8.0.6.GA-maven-repository</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -80,7 +80,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>ibm-bamoe-806-offline-maven-repository</id>
-                    <url>file:///Users/blulas/.m2/bamoe-8.0.6.GA-maven-repository</url>
+                    <url>file:///Users/$USER/.m2/bamoe-8.0.6.GA-maven-repository</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
